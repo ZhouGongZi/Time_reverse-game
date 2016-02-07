@@ -9,8 +9,9 @@ public class Origin : MonoBehaviour {
 	public int 					time_count = 0;
 
 	public int 					num_limit = 3;
-	public int 					cur_num = 1;
+	public int 					cur_num = 0;
 
+	public float 				offset = 0.5f;
 
 	public static Origin OO; //use singleton tp  
 
@@ -19,17 +20,19 @@ public class Origin : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (num_limit != cur_num) {
-
-			time_count ++;
-			if (time_count % 650 == 0) {
+			if (time_count % 600 == 0) {
 				GameObject go = Instantiate<GameObject> (character_prefab);
 				Vector3 origin_pos = transform.position;
 				origin_pos.y += 0.25f;
+				origin_pos.x += offset;
+				offset -= 0.5f;
+
 				go.transform.position = origin_pos;
 				cur_num ++;
 			}
+			time_count ++;
 		}
 
 	}
