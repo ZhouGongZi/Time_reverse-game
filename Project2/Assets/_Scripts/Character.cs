@@ -11,11 +11,9 @@ public class Character : MonoBehaviour {
 	public int					groundLayerMask;
 	public Vector3 				ray_Offset;
 	public float 				cast_radius = 0.28f; //the length of the ray
-
 	
 	//related to time
 	public int 					time_count = 0;
-
 
 	// Use this for initialization
 	void Start () { 

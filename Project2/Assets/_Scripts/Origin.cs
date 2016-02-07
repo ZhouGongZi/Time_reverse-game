@@ -14,6 +14,8 @@ public class Origin : MonoBehaviour {
 	public float 				offset = 0.5f;
 
 	public static Origin OO; //use singleton tp  
+
+
 	/*
 	List<int> list1 = new List<int>();
 	list1.Add(1);
@@ -24,17 +26,19 @@ public class Origin : MonoBehaviour {
 		total += num;
 	}*/
 
-
-
-
+	Vector3[] list0 = new Vector3[550];
+	Vector3[] list1 = new Vector3[550];
+	Vector3[] list2 = new Vector3[550];
+	
 
 	void Start () {
-
+		OO = this;
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 		if (num_limit != cur_num) {
+
 			if (time_count % 600 == 0) {
 				GameObject go = Instantiate<GameObject> (character_prefab);
 				Vector3 origin_pos = transform.position;
@@ -46,6 +50,10 @@ public class Origin : MonoBehaviour {
 				cur_num ++;
 			}
 			time_count ++;
+		}
+		else if(num_limit == cur_num){
+			//this do not need to be recorded
+
 		}
 
 	}
