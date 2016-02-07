@@ -49,7 +49,7 @@ public class Origin : MonoBehaviour {
 				G1 = Instantiate<GameObject> (character_prefab);
 				G0.transform.position = list0[record_count];
 				G1.transform.position = list1[record_count];
-			}else if(record_count <= 549){
+			}else if(record_count <= 549){ //has to be 549 not to over the boundary
 				G0.transform.position = list0[record_count];
 				G1.transform.position = list1[record_count];
 			}

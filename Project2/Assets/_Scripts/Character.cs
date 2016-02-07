@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//assumption: every character can only press twice (once ?) of throw state (boost).
+
+
 public class Character : MonoBehaviour {
 	//used for movement
 	public float				moveSpeed = 4f;
