@@ -14,6 +14,19 @@ public class Origin : MonoBehaviour {
 	public float 				offset = 0.5f;
 
 	public static Origin OO; //use singleton tp  
+	/*
+	List<int> list1 = new List<int>();
+	list1.Add(1);
+	//list1.Add("Pony"); //<-- Error at compile process
+	int total = 0;
+	foreach (int num in list1 )
+	{
+		total += num;
+	}*/
+
+
+
+
 
 	void Start () {
 

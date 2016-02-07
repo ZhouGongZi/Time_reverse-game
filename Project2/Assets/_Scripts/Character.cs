@@ -27,16 +27,19 @@ public class Character : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+
 		//isGrounded 
 		Vector3 center = this.transform.position;
 		grounded = Physics.Raycast (center, Vector3.down, cast_radius, groundLayerMask) 
 			|| Physics.Raycast (center + ray_Offset, Vector3.down, cast_radius, groundLayerMask)
 			|| Physics.Raycast (center - ray_Offset, Vector3.down, cast_radius, groundLayerMask);
 
+
 		//time runout
 		time_count ++;
 		if (time_count == 550)
 			Destroy (gameObject);
+
 
 		Vector3 vel = rigid.velocity;
 		//left and right
@@ -51,7 +54,12 @@ public class Character : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.S) && grounded) {
 			vel.y = jumpSpeed;
 		}
-
 		rigid.velocity = vel;
 	}
 }
+
+
+
+
+
+
