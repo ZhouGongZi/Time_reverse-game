@@ -25,6 +25,12 @@ public class Character : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		//record the position to the vector in Origin.OO first
+		if (Origin.OO.cur_num == 1) {
+			Origin.OO.list0[time_count] = transform.position;
+		} else if (Origin.OO.cur_num == 2) {
+			Origin.OO.list1[time_count] = transform.position;
+		} 
 
 		//isGrounded 
 		Vector3 center = this.transform.position;
