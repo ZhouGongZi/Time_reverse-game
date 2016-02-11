@@ -10,8 +10,10 @@ public class Origin : MonoBehaviour {
 	public GameObject			character_prefab_0;
 	public GameObject			character_prefab_1;
 	public GameObject			character_prefab_2;
+	public GameObject			clonePrefab;
 	//related to time
 	public int 					time_count = 0;
+	public int					record_count0 = 0;
 	public int					record_count = 0;
 
 	public int 					num_limit = 3;
@@ -62,6 +64,7 @@ public class Origin : MonoBehaviour {
 			}
 		}
 		else if(2 == cur_num){
+
 			if (time_count % 600 == 0) {
 				cur_num ++;
 				
@@ -72,6 +75,15 @@ public class Origin : MonoBehaviour {
 				//offset -= 0.5f;
 				go.transform.position = origin_pos;
 			}
+
+			if(record_count0 == 0){
+				G0 = Instantiate<GameObject> (clonePrefab);
+				G0.transform.position = list0[record_count0];
+			}else if(record_count0 <= 549){ //has to be 549 not to over the boundary
+				G0.transform.position = list0[record_count0];
+			}
+			record_count0 ++;
+
 		}
 
 

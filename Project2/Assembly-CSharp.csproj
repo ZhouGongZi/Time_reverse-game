@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_Scripts\Character.cs" />
+     <Compile Include="Assets\_Scripts\CloneObj.cs" />
      <Compile Include="Assets\_Scripts\Origin.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>

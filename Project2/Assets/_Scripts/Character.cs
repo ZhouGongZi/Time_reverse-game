@@ -16,7 +16,7 @@ public class Character : MonoBehaviour {
 	public float 				cast_radius = 0.28f; //the length of the ray
 	
 	//related to time
-	public int 					time_count = 0;
+	int 					time_count = 0;
 
 	// Use this for initialization
 	void Start () { 
@@ -30,9 +30,9 @@ public class Character : MonoBehaviour {
 	void FixedUpdate () {
 		//record the position to the vector in Origin.OO first
 		if (Origin.OO.cur_num == 1) {
-			Origin.OO.list0[time_count] = transform.position;
+			Origin.OO.list0[time_count] = this.transform.position;
 		} else if (Origin.OO.cur_num == 2) {
-			Origin.OO.list1[time_count] = transform.position;
+			Origin.OO.list1[time_count] = this.transform.position;
 		} 
 
 		//isGrounded 
