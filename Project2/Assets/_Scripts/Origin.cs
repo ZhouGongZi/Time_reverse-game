@@ -10,7 +10,8 @@ public class Origin : MonoBehaviour {
 	public GameObject			character_prefab_0;
 	public GameObject			character_prefab_1;
 	public GameObject			character_prefab_2;
-	public GameObject			clonePrefab;
+	public GameObject			clonePrefab1;
+	public GameObject			clonePrefab2;
 	//related to time
 	public int 					time_count = 0;
 	public int					record_count0 = 0;
@@ -77,7 +78,7 @@ public class Origin : MonoBehaviour {
 			}
 
 			if(record_count0 == 0){
-				G0 = Instantiate<GameObject> (clonePrefab);
+				G0 = Instantiate<GameObject> (clonePrefab1);
 				G0.transform.position = list0[record_count0];
 			}else if(record_count0 <= 549){ //has to be 549 not to over the boundary
 				G0.transform.position = list0[record_count0];
@@ -89,8 +90,8 @@ public class Origin : MonoBehaviour {
 
 		else if (num_limit == cur_num) {
 			if(record_count == 0){
-				G0 = Instantiate<GameObject> (character_prefab_0);
-				G1 = Instantiate<GameObject> (character_prefab_1);
+				G0 = Instantiate<GameObject> (clonePrefab1);
+				G1 = Instantiate<GameObject> (clonePrefab2);
 				G0.transform.position = list0[record_count];
 				G1.transform.position = list1[record_count];
 			}else if(record_count <= 549){ //has to be 549 not to over the boundary
